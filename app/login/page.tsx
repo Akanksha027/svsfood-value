@@ -50,7 +50,7 @@ function LoginForm() {
       : null);
 
   return (
-    <main className="relative min-h-screen bg-slate-50 flex items-center justify-center p-4 sm:p-6 overflow-hidden">
+    <main className="relative flex-1 min-h-0 bg-slate-50 flex items-center justify-center p-4 sm:p-6 overflow-hidden">
       <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-[#f16a34]/8 to-transparent blur-[100px] pointer-events-none select-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-gradient-to-br from-[#f16a34]/12 to-transparent blur-[120px] pointer-events-none select-none" />
 
@@ -143,14 +143,16 @@ function LoginForm() {
 
 export default function LoginPage() {
   return (
-    <Suspense
-      fallback={
-        <main className="min-h-screen flex items-center justify-center text-slate-500 bg-slate-50">
-          Loading…
-        </main>
-      }
-    >
-      <LoginForm />
-    </Suspense>
+    <div className="flex-1 flex flex-col min-h-0">
+      <Suspense
+        fallback={
+          <main className="flex-1 min-h-0 flex items-center justify-center text-slate-500 bg-slate-50">
+            Loading…
+          </main>
+        }
+      >
+        <LoginForm />
+      </Suspense>
+    </div>
   );
 }

@@ -41,7 +41,7 @@ button,
 
 .dash-root {
   background: var(--surface-muted);
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .dash-sidebar {

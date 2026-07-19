@@ -32,7 +32,7 @@ export default function VaultShell({
   };
 
   return (
-    <div className="dash-root">
+    <div className="dash-root flex-1 flex flex-col">
       <aside
         className="dash-sidebar fixed top-0 left-0 z-50 hidden lg:flex flex-col h-screen"
         style={{ width: "var(--sidebar-width)" }}
@@ -81,7 +81,7 @@ export default function VaultShell({
         </div>
       </aside>
 
-      <div className="dash-content flex flex-col min-h-screen">
+      <div className="dash-content flex flex-col flex-1 min-h-0">
         <header className="dash-header sticky top-0 z-40 h-14 flex items-center px-4 sm:px-6 gap-3">
           <div className="lg:hidden font-extrabold text-sm text-slate-800">
             SVS Vault
